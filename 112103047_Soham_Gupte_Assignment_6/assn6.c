@@ -6,9 +6,8 @@
 #include "assn6_header.h"
 
 int main() {
-	
+	srand(time(0));
 	Heap max_h, min_h;
-	srand(0);
 	int n, x;
 	printf("Enter number of elements to insert into heap: ");
 	scanf("%d",&n);
@@ -24,10 +23,24 @@ int main() {
 		insertMaxHeap(&max_h, x);
 	}
 	printf("\n");
-
+	n++;
 	printf("Level order display of MIN heap:\n");
 	displayLevelOrder(&min_h);
 	printf("Level order display of MAX heap:\n");
         displayLevelOrder(&max_h);
-
+	printf("After deletion (MIN): ");
+	int deleted_pos = min_h.size;
+	while (n < min_h.size) {
+		deleteMin(&min_h, &deleted_pos);
+		n++;
+	}
+	printf("\n");
+	printf("After deletion (MAX): ");
+	deleted_pos = max_h.size;
+	while (n) {
+		deleteMax(&max_h, &deleted_pos);
+		n--;
+	}
+	printf("\n");
+	return 0;
 }
