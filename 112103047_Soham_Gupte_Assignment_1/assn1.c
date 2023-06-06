@@ -15,12 +15,7 @@ int main() {
 		root = insert(root, element);
 		size--;
 	}
-        //root = insert(root, 20);
-//        root = insert(root, 10);
-  //      root = insert(root, 40);
-    //    root = insert(root, 30);
-      //  root = insert(root, 60);
 	printf("Output level order: ");
-        LevelOrderDisplay(root, &Q);
+    LevelOrderDisplay(root, &Q);
 }
 

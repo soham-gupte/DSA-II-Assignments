@@ -46,7 +46,7 @@ bstNode* insert(bstNode* root, int x) {
 	else if (x < root->val) {
 		root->left = insert(root->left, x);
 	}
-	else {
+	else if (x > root->val) {
 		root->right = insert(root->right, x);
 	}
 	return root;

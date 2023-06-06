@@ -18,7 +18,7 @@ int main() {
 	printf("Elements randomly generated: ");
 	while (n--) {
 		x = rand()%100;
-	       	printf("%d  ",x);
+	    printf("%d  ",x);
 		insertMinHeap(&min_h, x);
 		insertMaxHeap(&max_h, x);
 	}
